@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.card-body{
+  border-radius: 10px;
+  background-color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group{
+  color: red;
+  font-size: larger;
+  font-style: italic;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:disabled{
+  cursor: not-allowed;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.text-danger{
+  font-weight: 400;
+}
+.navbar-brand{
+  font-family: Georgia;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+  padding: 8px;
+  font-style: italic;
+}
+.bg-custom{
+  background-color: #580920;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.nav-color{
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item{
+  color: white;
+}
+.nav-color:hover{
+  color: #e30b0bea;
+  border-radius: 10px;
+}
+a:focus,
+a:hover{
+  color: #f4f827;
+}
+.nav-link{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus{
+  color: white;
+  color: #b10505;
+  border-radius: 10px;
+}
+.card{
+  font-weight: bold;
+  display: flex;
+  float: left;
+  width:auto;
+  margin-left: 50px;
+  opacity: 0.80;
+}
+.message{
+  padding: 3px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+td{
+  font-weight: normal;
+}
+.view{
+  margin: 10px;
 }

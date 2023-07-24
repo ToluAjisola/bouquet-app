@@ -1,0 +1,11 @@
+{
+    "bookings":[
+        {
+            "id": 1001,
+            "bouquetName": "RoselineRed",
+            "bookedOn":"",
+            "emailId":"",
+            "flowerCount":4
+        }
+    ]
+}
