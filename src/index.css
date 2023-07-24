@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  font-family: sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../src/assets/9-94247_10-imagens-png-bouquets-free-flower-transparent-png.png");
 }
 
 code {
