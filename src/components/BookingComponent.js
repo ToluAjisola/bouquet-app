@@ -112,7 +112,110 @@ const BookingComponent = (props) => {
         }
     }
     return (
-        <div>BookingComponent</div>
+        <React.Fragment>
+            <div className="CreateBooking" >
+                <div className="row">
+                    <div>
+                        <br />
+                        <div className="card" style={{ width: "500px" }}>
+                            <div className="card-header bg-Custom">
+                                <h4>Book Your Bouquet</h4>
+                            </div>
+                            <div className="card-body">
+                                <form className="form" noValidate
+                                    onSubmit={handleSubmit}>
+                                    <div className="form-group">
+                                        <label>Bouquet Name</label>
+                                        <select
+                                            name="bouquetName"
+                                            className="form-control"
+                                            value={state.bouquetName}
+                                            onChange={handleChange}
+                                        >
+                                            <option value="" disabled>
+                                                Select a bouquet
+                                            </option>
+                                            <option value="RosalineRed">Rosaline Red</option>
+                                            <option value="TerifficTulip">Teriffic Tulip</option>
+                                            <option value="ChineseChandelier">Chinese Chandelier </option>
+                                        </select>
+
+                                        {formErrors.bouquetNameError ? (
+                                            <span
+                                                className="text-danger" >
+                                                {formErrors.bouquetNameError}
+                                            </span>
+                                        ) : null}
+
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Email Id</label>
+                                        <input
+                                            type="email"
+                                            name="emailId"
+                                            ClassName="form-control"
+                                            placeholder="Enter your email"
+                                            value={state.emailId}
+                                            onChange={handleChange}
+                                        />
+                                         {formErrors.emailIdError ? (
+                                            <span
+                                                className="text-danger" >
+                                                {formErrors.emailIdError}
+                                            </span>
+                                        ) : null}
+
+                                    </div>
+                                    <div className="form-group">
+                                        <label>No of Bouquet</label>
+                                        <input
+                                            type="number"
+                                            name="flowerCount"
+                                            ClassName="form-control"
+                                            placeholder="Number of Bouquet"
+                                            value={state.flowerCount}
+                                            onChange={handleChange}
+                                        />
+                                         {formErrors.flowerCountError ? (
+                                            <span
+                                                className="text-danger" >
+                                                {formErrors.flowerCountError}
+                                            </span>
+                                        ) : null}
+
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Booking date</label>
+                                        <input
+                                            type="date"
+                                            name="bookedOn"
+                                            ClassName="form-control"
+                                            placeholder="Number of Bouquet"
+                                            value={state.bookedOn}
+                                            onChange={handleChange}
+                                        />
+                                         {formErrors.bookedOnError ? (
+                                            <span
+                                                className="text-danger" >
+                                                {formErrors.bookedOnError}
+                                            </span>
+                                        ) : null}
+
+                                    </div>
+                                    <br/>
+                                <button disabled={!valid} type="submit" name="active" className="btn btn-primary">
+                                    Book Bouquet
+                                </button>
+                                
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                    
+
+    </React.Fragment>
     );
         };
         export default BookingComponent;
