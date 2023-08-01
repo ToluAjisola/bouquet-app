@@ -15,7 +15,7 @@ function AllBookings() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3000/bookings/")
+            .get("http://localhost:4000/bookings/")
             .then((res) => {
                 setBookings(res.data);
             })
@@ -26,7 +26,7 @@ function AllBookings() {
 
     const handleAction = (id) => {
         axios
-          .delete("http://localhost:3000/bookings/"+id)
+          .delete("http://localhost:4000/bookings/"+id)
             .then((res) => {
                 const afterDelete = bookings.filter(t => t.id != id);
             

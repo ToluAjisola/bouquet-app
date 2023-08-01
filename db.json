@@ -3,8 +3,8 @@
         {
             "id": 1001,
             "bouquetName": "RoselineRed",
-            "bookedOn":"",
-            "emailId":"",
+            "bookedOn":"2023-1-1",
+            "emailId":"gh@gmail.com",
             "flowerCount":4
         }
     ]

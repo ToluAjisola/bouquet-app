@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { validation } from "./../validators/validation";
 import { useParams } from "react-router-dom";
-let url = "http://localhost:3000/bookings/";
+let url = "http://localhost:4000/bookings/";
 function UpdateBooking() {
   let params = useParams();
-  const [bookings, setBookings] = useState({});
+  const [booking, setBooking] = useState({});
   // State to hold the form details that needs to be added .When user enters the values the state gets updated
   const [bouquetName, setBouquetName] = useState("");
   const [emailId, setEmailId] = useState(0);
@@ -37,7 +37,7 @@ function UpdateBooking() {
     axios
       .get(url+params.id)
       .then((res) => {
-        setBookings(res.data);
+        setBooking(res.data);
       })
       .catch((err) => {
         
@@ -48,24 +48,25 @@ function UpdateBooking() {
         // 2. You should prevent page reload on submit
         // 3. check whether all the form fields are entered . If any of the form fields is not entered set the mandatory state variable to true . 
         e.preventDefault();
-        if (state.bouquetName === "" ||
-            state.bookedOn === "" || state.emailed === "" ||
-            state.flowerCount) {
-            setMandatory(true);
-        } else {
+      setBookedOn(booking.bookedOn);
+      const newBooking = {
+        bouquetName: bouquetName,
+        bookedOn: booking.bookedOn,
+        emailId: emailId,
+        flowerCount: flowerCount,
+      };
             let data = { ...state };
             setMandatory(false);
             axios
-                .post(url, data)
+                .put(url, params.id, newBooking)
                 .then((response) => {
-                    setSuccessMessage(
-                        " Booking is successfully created with bookingId :" + response.data.id
-                    ); console.log(response.data.id);
+                  let updatedBooking = response.data.id;
+                   
                 })
                 .catch((errors) => {
                     setErrorMessage(messages.ERROR); console.log(" error occoured ");
                 });
-        }
+        
     }
     
   

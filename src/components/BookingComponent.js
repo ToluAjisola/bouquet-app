@@ -1,7 +1,7 @@
 import React, { useState } from  "react"; 
 import axios from "axios"; 
 import { validation } from './../validators/validation';
-let url = "http://localhost:3000/bookings/" ; 
+let url = "http://localhost:4000/bookings/" ; 
 const BookingComponent = (props) => {
     // State to hold the form details that needs to be added .When user enters the values the state gets updated 
     const [state, setState] = useState({
